@@ -11,11 +11,39 @@
     <body>
         <div class="container">          
             <div class="page-header">
-                <h2 id="House"><span class="glyphicon glyphicon-equalizer"></span> Meow Manager</h2>
+                <h2 class="House" onclick="loadHomeView()"><span class="glyphicon glyphicon-equalizer"></span> Meow Manager</h2>
             </div>
             <div class="jumbotron">
-            	<div id="container-body">
-                
+            	<div id="container-body" >
+            	    
+            	</div>
+            	<div id="extra-body2" class="hidden">
+            	    <h2>Fueron de Ayuda?</h2>
+            	    </br>
+                    <input id="radio1" type="radio" name="help" value="yes" checked="checked"> Yes<br>
+                    <input type="radio" name="help" value="no"> No<br>
+                    <button  class="btn btn-success btn-lg House" onclick="loadHomeView()">Submit  <span class="glyphicon glyphicon-map-marker"></span></button>
+            	</div>
+            	</br>
+            	<p id="map"></p>
+            	<div id="form2" class="hidden">
+            	    <select name="selectUni" id="selectUni" onchange="selectUni(this.value)">
+                      <option value="n0" disabled selected style="display:none;">--Seleccione--</option>
+                      <option value="n1">Unitec</option>
+                      <option value="n2">Meow</option>
+                    </select>
+            	</div>
+            	<div id="form1" class="hidden">
+            	    <form id="jquery_form">
+            	        <text id="txt_nombre"></text>
+            	        </br>
+                        <input type="text" name="subject" placeholder="Asunto" />
+                        <textarea name="text" placeholder="Mensaje" ></textarea>
+                        <input type="text" name="email" placeholder="Email"/>
+                        <input type="text" name="cell" placeholder="Número Celular"/>
+                        </br>
+                        <input type="submit" name="send" value="Send" class="btn btn-primary"/>
+                    </form>
             	</div>
             </div>
             <hr>
@@ -27,4 +55,7 @@
     <script src="JS/jquery-3.1.1.js"></script>
     <script src="JS/bootstrap.min.js"></script>
     <script src="JS/MainLoader.js"></script>
+    <script src="JS/main.js"></script>
+    <script src="JS/Gps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_h7MKshyQR2tvZDNN12CI-QRnLc_Qiso&libraries=places&callback=initMap" async defer></script>
 </html>
