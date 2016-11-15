@@ -20,8 +20,8 @@
             	<div id="extra-body2" class="hidden">
             	    <h2>Fueron de Ayuda?</h2>
             	    </br>
-                    <input id="radio1" type="radio" name="help" value="yes" checked="checked"> Yes<br>
-                    <input type="radio" name="help" value="no"> No<br>
+                    <input class = "col-md-8 col-xs-6" id="radio1" type="radio" name="help" value="yes" checked="checked"> Yes<br>
+                    <input class = "col-md-8 col-xs-6" type="radio" name="help" value="no"> No<br>
                     <button  class="btn btn-success btn-lg House" onclick="loadHomeView()">Submit  <span class="glyphicon glyphicon-map-marker"></span></button>
             	</div>
             	</br>
@@ -37,12 +37,18 @@
             	    <form id="jquery_form">
             	        <text id="txt_nombre"></text>
             	        </br>
-                        <input type="text" name="subject" placeholder="Asunto" />
-                        <textarea name="text" placeholder="Mensaje" ></textarea>
-                        <input type="text" name="email" placeholder="Email"/>
-                        <input type="text" name="cell" placeholder="Número Celular"/>
-                        </br>
-                        <input type="submit" name="send" value="Send" class="btn btn-primary"/>
+            	        <div class="row"><input class = "col-md-8 col-xs-6" type="text" name="subject" placeholder="Asunto" /></div>
+            	        <div class="row"><textarea class = "col-md-8 col-xs-6" name="text" placeholder="Mensaje" ></textarea></div>
+            	        <div class="row"><input class = "col-md-8 col-xs-6" type="text" name="email" placeholder="Email"/></div>
+            	        <div class="row"><input class = "col-md-8 col-xs-6" type="text" name="cell" placeholder="Número Celular"/></div>
+            	        </br>
+            	        <div class="row"><input class = "col-md-8 col-xs-6" type="submit" name="send" value="Send" class="btn btn-primary"/></div>
+                        
+                        
+                        
+                        
+                        
+                        
                     </form>
             	</div>
             </div>

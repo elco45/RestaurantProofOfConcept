@@ -21,8 +21,11 @@ var sendButton = $("#" + form_id + " [name='send']");
 function send() {
     //sendButton.val('Sending…');
     //sendButton.prop('disabled',true);
-
+    
     var subject = $("#" + form_id + " [name='subject']").val();
+    if($("#" + form_id + " [name='email']").val().length  === 0 || $("#" + form_id + " [name='cell']").val().length === 0 || $("#" + form_id + " [name='text']").val().length === 0){
+        return false;
+    }
     var message = "Email: "+$("#" + form_id + " [name='email']").val()+"\nNúmero Celular: "+$("#" + form_id + " [name='cell']").val()+ "\n"+$("#" + form_id + " [name='text']").val();
     data['subject'] = subject;
     data['text'] = message;
